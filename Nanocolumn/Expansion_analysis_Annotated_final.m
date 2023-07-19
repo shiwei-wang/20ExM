@@ -4,7 +4,7 @@
 %%currently, and can be adjusted to fewer or more channels if desired.
 
 clear;
-file0 = '/Users/wangshiwei/Documents/MIT/nanocolumn/data'; %Enter file name here, include proper path if current folder does not include file to be analyzed
+file0 = 'filename'; %Enter file name here, include proper path if current folder does not include file to be analyzed
 mkdir('analysis')
 
 %Load stacks for each channel
