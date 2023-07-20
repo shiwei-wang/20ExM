@@ -9,8 +9,8 @@ mkdir('analysis')
 
 %Load stacks for each channel
 %d0g = double(loadtiff([file0 ''])); %Define which channel is green
-d0r = double(loadtiff([file0 '/source10-r.tif'])); %Define which channel is red
-d0b = double(loadtiff([file0 '/source10-b.tif'])); %Define which channel is blue
+d0r = double(loadtiff([file0 '/file.tif'])); %Define which channel is red
+d0b = double(loadtiff([file0 '/file.tif'])); %Define which channel is blue
 
 %maximal projection along z
 %d0gmax = double(max(d0g,[],3));   
@@ -70,7 +70,7 @@ end  %write the RGB stack of this synapse in the folder, two numbers represent R
 %% Part3: Read in the saved tiffs and do the cross correlation
 % expand the matrix to make voxel cubic
 Exp = 18;   %expansion factor, adjust as needed
-list0 = dir('/Users/wangshiwei/Documents/MIT/nanocolumn/script/analysis/run9');
+list0 = dir('file_path');
 res = [];       %array to keep the results
 rmax = 20;      %Maximum shift distance, in pixels (defined below)
 for kkk=3:length(list0)
@@ -122,7 +122,7 @@ save('CrossCorrelation.txt', 'res', '-ascii', '-tabs');
 %Autocorrelation is calculated just as the cross-correlation except there
 %is no xyzshift
 Exp = 18;   %expansion factor, adjust as needed
-list0 = dir('/Users/wangshiwei/Documents/MIT/nanocolumn/script/analysis/run9');
+list0 = dir('file_path');
 res = [];       %array to keep the results
 rmax = 20;      %Maximum shift distance, in pixels (defined below)
 for kkk=3:length(list0)
@@ -164,7 +164,7 @@ save('AutoCorrelation.txt', 'res', '-ascii', '-tabs');
 %% Part5: Read in the saved tiffs and do protein enrichment analysis
 % expand the matrix to make voxel cubic
 Exp = 18;   %expansion factor, adjust as needed
-list0 = dir('/Users/wangshiwei/Documents/MIT/nanocolumn/script/analysis/run9');
+list0 = dir('file_path');
 resaa = [];       %array to keep the results
 resab = []; resba = []; resbb = []; 
 rmax = 180;     %Max distance over which to run the analysis, in nm
