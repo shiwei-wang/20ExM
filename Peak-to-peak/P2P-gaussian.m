@@ -35,8 +35,6 @@ xlim([-150, 150]);
 xlabel({'Transverse Position', '(nm)'});
 ylabel('Normalized Intensity');
 set(gca, 'FontSize', 18);
-%title('Gaussian Curve Fitting');
-%legend('Location', 'best');
 
 % Remove top and right spines
 ax = gca;
