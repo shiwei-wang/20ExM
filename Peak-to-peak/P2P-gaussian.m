@@ -1,6 +1,6 @@
 %% Calculate Double Gaussian Curve
-% Save crosssection instensity from Fiji. Normalize and center the curve.
-% Save as CSV without column names. C1: Distance in nm. C2: Intensity.
+% Save cross-section intensity from Fiji. Normalize and center the curve.
+% Save as CSV without column names. C1: Distance in nm. C2: Normalized intensity.
 % Specify the file path and name
 clear
 file = 'P2P-2-b-norm.csv';
@@ -8,9 +8,7 @@ file = 'P2P-2-b-norm.csv';
 % Import the CSV file
 data = readmatrix(file);
 
-% Display the column names and the data
-%disp('Column Names:');
-%disp(column_names);
+% Display the data
 disp('Data:');
 disp(data);
 
