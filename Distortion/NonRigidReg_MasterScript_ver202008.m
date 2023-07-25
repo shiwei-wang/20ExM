@@ -18,8 +18,8 @@
 
 %% Load Image
 
-imgPair.moving.input = imread('tissue5-post.tif'); % set to post
-imgPair.static.input = imread('tissue5-pre.tif'); % set to pre; this is ground truth
+imgPair.moving.input = imread('file-post.tif'); % set to post
+imgPair.static.input = imread('file-pre.tif'); % set to pre; this is ground truth
 imgSize = size(imgPair.moving.input,1)
 
 %% Run 1st Script & Save Workspace
