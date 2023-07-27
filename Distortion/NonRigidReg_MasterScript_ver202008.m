@@ -18,8 +18,8 @@
 
 %% Load Image
 
-imgPair.moving.input = imread('tissue5-post.tif'); % set to post
-imgPair.static.input = imread('tissue5-pre.tif'); % set to pre; this is ground truth
+imgPair.moving.input = imread('file-post.tif'); % set to post
+imgPair.static.input = imread('file-pre.tif'); % set to pre; this is ground truth
 imgSize = size(imgPair.moving.input,1)
 
 %% Run 1st Script & Save Workspace
@@ -30,7 +30,7 @@ timestamp = [num2str(currTime(1)*10000+ currTime(2) * 100 + currTime(3)) '-' ...
 save(['Workspace_After_Workflow_' timestamp])
 
 %% Set Parameters
-imgPair.info.pixelWidth = 0.08125;  % DNA Paint Pixel Size: 0.00395142. Tissue pixel size: 0.08125
+imgPair.info.pixelWidth = 0.08125;  % Adjust to pre-expansion pixel size
 sampleInterval = 5; 
 % this is the spacing between pixels where distortion is calculated; 
 % larger values reduce the x-resolution of the output error plot, but
